@@ -330,6 +330,235 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     while (i <= n)
+//     {
+//         int j = 1;
+//         while (j <= n)
+//         {
+//             char ch = 'A' + i + j - 2;
+//             cout << ch << " ";
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     while (i < n)
+//     {
+//         int j = 1;
+//         while (j <= i)
+//         {
+//             char ch = 'A' + i - 1;
+//             cout << ch << " ";
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int count = 0;
+//     int i = 1;
+//     while (i <= n)
+//     {
+//         int j = 1;
+//         while (j <= i)
+//         {
+//             char ch = 'A' + count;
+//             cout << ch;
+//             count++;
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+
+//     while (i <= n)
+//     {
+//         int j = 1;
+//         while (j <= n)
+//         {
+//             char ch = 'A' + n - i + j - 1;
+//             cout << ch << " ";
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     while (i <= n)
+//     {
+//         int space = n - i;
+//         while (space)
+//         {
+//             cout << " ";
+//             space--;
+//         }
+//         int j = 1;
+//         while (j <= i)
+//         {
+//             cout << "*";
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     while (i <= n)
+//     {
+//         int j = 1;
+//         while (j <= n - i + 1)
+//         {
+//             cout << "*";
+//             j++;
+//         }
+
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     while (i <= n)
+//     {
+//         int space = 0;
+//         while (space <= i - 1)
+//         {
+//             cout << ' ';
+//             space++;
+//         }
+//         int j = 1;
+//         while (j <= n - i + 1)
+//         {
+//             cout << i + j - 1;
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     int count = 1;
+//     while (i <= n)
+//     {
+//         int space = 0;
+//         while (space <= n - i)
+//         {
+//             cout << ' ';
+//             space++;
+//         }
+//         int j = 1;
+//         while (j <= i)
+//         {
+//             cout << count;
+//             count = count + 1;
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     while (i <= n)
+//     {
+//         int space = 0;
+//         while (space <= n - i)
+//         {
+//             cout << ' ';
+//             space++;
+//         }
+//         int j = 1;
+//         while (j <= i)
+//         {
+//             cout << j;
+//             j++;
+//         }
+//         int start = i - 1;
+//         while (start)
+//         {
+//             cout << start;
+//             start = start - 1;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
 #include <iostream>
 using namespace std;
 int main()
@@ -339,13 +568,35 @@ int main()
     int i = 1;
     while (i <= n)
     {
+        // 1st triangle
         int j = 1;
-        while (j <= n)
+        while (j <= n - i + 1)
         {
-            char ch = 'A' + i + j - 2;
-            cout << ch << " ";
+            cout << j;
             j++;
         }
+        // 2nd triangle
+        int star1 = 1;
+        while (star1 <= i - 1)
+        {
+            cout << "*";
+            star1++;
+        }
+        // 3nd triangle
+        int star2 = 1;
+        while (star2 <= i - 1)
+        {
+            cout << "*";
+            star2++;
+        }
+        // 4th triangle
+        int z = 1;
+        while (z <= n - i + 1)
+        {
+            cout << n - i - z + 2;
+            z++;
+        }
+
         cout << endl;
         i++;
     }
